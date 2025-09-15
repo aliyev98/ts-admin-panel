@@ -1,0 +1,14 @@
+.profile-dropdown {
+    top: 80px;
+    right: -12px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -22px; // dropdown'ın üstünden çıkacak şekilde
+        right: 22px; // buton hizasında ayarla
+        border-width: 12px;
+        border-style: solid;
+        border-color: transparent transparent #fff transparent;
+    }
+}

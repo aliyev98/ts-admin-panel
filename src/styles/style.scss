@@ -5,10 +5,29 @@
 
 // components
 
+// (dropdowns)
+@use './components/dropdowns/dropdowns';
+@use './components/dropdowns/profileDropdown';
+
 // pages
+@use './pages/mainPage';
 
 // layouts
+@use './layouts/header';
+@use './layouts/footer';
 
 // sidebars
+@use './sidebars/sidebar';
 
 // ui
+
+// (inputs)
+@use './ui/inputs/headerSearchBar';
+
+// (logos)
+@use './ui/logos/logo';
+
+// (buttons)
+@use './ui/buttons/notificationsButton';
+@use './ui/buttons/shopping-card-button';
+@use './ui/buttons/profile';

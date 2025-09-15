@@ -1,0 +1,27 @@
+.notifications-button-container {
+    position: relative;
+
+    .count-bar {
+        display: flex;
+        align-items: center;
+        background-color: red;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-radius: 50%;
+        padding: 2px;
+
+        span {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 50%;
+            font-size: 10px;
+            font-weight: 500;
+        }
+    }
+
+}

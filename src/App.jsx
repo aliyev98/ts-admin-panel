@@ -1,9 +1,12 @@
+import MainPage from "./pages/MainPage"
 import "./styles/style.scss"
 
 const App = () => {
   return (
     <div className="app">
-      TeymurStore Admin Panel
+
+      <MainPage />
+
     </div>
   )
 }

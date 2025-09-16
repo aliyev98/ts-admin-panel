@@ -1,17 +1,30 @@
 import React from 'react'
 import Header from '../layouts/Header'
 import Sidebar from '../sidebars/Sidebar'
+import { useSelector } from 'react-redux'
+import Products from '../components/sections/Products'
+import AddProduct from '../components/sections/AddProduct'
 
 const MainPage = () => {
+
+  const selectedSection = useSelector((state) => state.sidebar.sidebarSelection)
+
   return (
     <div className='mainpage-container'>
 
       <Sidebar />
 
-      <div className="content">
+      <div className="content-wrapper">
         <Header />
 
-        fdffd
+        <div className="content">
+
+          {selectedSection === "products" && <Products />}
+
+          {selectedSection === "add_product" && <AddProduct />}
+
+        </div>
+
 
       </div>
 

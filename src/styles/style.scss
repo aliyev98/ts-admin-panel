@@ -8,6 +8,7 @@
 // (dropdowns)
 @use './components/dropdowns/dropdowns';
 @use './components/dropdowns/profileDropdown';
+@use './components/dropdowns/layoutDrpdown';
 
 // pages
 @use './pages/mainPage';
@@ -23,6 +24,7 @@
 
 // (inputs)
 @use './ui/inputs/headerSearchBar';
+@use './ui/inputs/sectionSeachBar';
 
 // (logos)
 @use './ui/logos/logo';
@@ -31,3 +33,4 @@
 @use './ui/buttons/notificationsButton';
 @use './ui/buttons/shopping-card-button';
 @use './ui/buttons/profile';
+@use './ui/buttons/addButton';

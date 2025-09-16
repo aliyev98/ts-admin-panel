@@ -1,9 +1,34 @@
 .sidebar-container {
-    min-width: 350px;
     background-color: #fcfcfc;
     box-shadow: 10px 0px 10px -8px rgba(0, 0, 0, .25);
     height: 100vh;
     z-index: 9999;
+    max-width: 280px;
+    min-width: 280px;
+
+    &.collapsed{
+        max-width: 80px;
+        min-width: 80px;
+
+        .sidebar-header{
+            flex-direction: column;
+        }
+
+        button{
+
+            .arrow-icon{
+                display: none !important;
+            }
+        }
+
+        .section-icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
 
     .sidebar-header {
         display: flex;
@@ -21,6 +46,7 @@
 
         button {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             gap: 12px;
             width: 100%;
@@ -29,20 +55,28 @@
             padding: 12px;
             border-radius: 12px;
 
-            span {
-                font-weight: 500;
-                font-size: 18px;
+            .arrow-icon {
+                display: none;
             }
 
-            &:hover {
-                background-color: #efefef;
+            span {
+                font-size: 16px;
             }
+
         }
 
         .active {
             background: var(--Neutral-03, #EFEFEF);
             box-shadow: 0px -2px 1px 0px rgba(0, 0, 0, 0.05) inset,
                 0px 1px 1px 0px #FFF inset;
+
+            .arrow-icon {
+                display: block;
+            }
+
+            span {
+                font-weight: 500;
+            }
         }
     }
 }

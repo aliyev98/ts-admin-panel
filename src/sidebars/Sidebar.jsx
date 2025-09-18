@@ -20,6 +20,7 @@ const Sidebar = () => {
     { id: 2, content: 'Add product', map: 'add_product', img: <Plus /> },
     { id: 3, content: 'Customers', map: 'customers', img: <UserRound /> },
     { id: 4, content: 'Orders', map: 'orders', img: <ScrollText /> },
+    { id: 5, content: 'Analyses', map: 'analyses', img: <ScrollText /> },
   ]
 
   return (
@@ -66,8 +67,6 @@ const Sidebar = () => {
             </button>
           ))
         }
-
-
 
       </div>
 

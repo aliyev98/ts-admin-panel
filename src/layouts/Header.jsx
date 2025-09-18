@@ -5,6 +5,7 @@ import ShoppingCardButton from '../ui/buttons/ShoppingCardButton'
 import Profile from '../ui/buttons/Profile'
 
 const Header = () => {
+
     return (
 
         <div className='header-container'>
@@ -22,6 +23,7 @@ const Header = () => {
             </div>
 
         </div>
+        
     )
 }
 

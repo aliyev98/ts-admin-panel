@@ -10,6 +10,10 @@
 @use './components/dropdowns/profileDropdown';
 @use './components/dropdowns/layoutDrpdown';
 
+// sections
+
+@use './components/sections/products';
+
 // pages
 @use './pages/mainPage';
 

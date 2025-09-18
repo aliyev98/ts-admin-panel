@@ -1,0 +1,31 @@
+.products-section {
+
+
+    .product-counts {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 12px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            span{
+                font-size: 12px;
+            }
+
+            span {
+                &:first-child {
+                    color: #0A58D1;
+                }
+
+                &:last-child {
+                    color: #989a9c;
+                }
+            }
+
+        }
+    }
+}

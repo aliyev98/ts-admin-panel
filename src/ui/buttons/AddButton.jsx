@@ -1,7 +1,6 @@
 import { Plus } from 'lucide-react'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import { setSidebarSelection } from '../../redux/sidebarSlice'
 
 const AddButton = ({content, route}) => {

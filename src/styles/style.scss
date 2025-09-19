@@ -11,8 +11,11 @@
 @use './components/dropdowns/layoutDrpdown';
 
 // sections
-
 @use './components/sections/products';
+@use './components/sections/addProduct';
+
+// tables
+@use './components/tables/table';
 
 // pages
 @use './pages/mainPage';
@@ -38,3 +41,4 @@
 @use './ui/buttons/shopping-card-button';
 @use './ui/buttons/profile';
 @use './ui/buttons/addButton';
+@use './ui/buttons/primaryButton';

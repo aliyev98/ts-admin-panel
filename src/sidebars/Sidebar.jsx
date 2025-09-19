@@ -16,11 +16,12 @@ const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   const sections = [
-    { id: 1, content: 'Products', map: 'products', img: <ShoppingBasket /> },
-    { id: 2, content: 'Add product', map: 'add_product', img: <Plus /> },
-    { id: 3, content: 'Customers', map: 'customers', img: <UserRound /> },
-    { id: 4, content: 'Orders', map: 'orders', img: <ScrollText /> },
-    { id: 5, content: 'Analyses', map: 'analyses', img: <ScrollText /> },
+    { id: 1, content: 'Məhsullar', map: 'products', img: <ShoppingBasket /> },
+    { id: 2, content: 'Məhsul əlavə et', map: 'add_product', img: <Plus /> },
+    { id: 3, content: 'İstifadəçilər', map: 'customers', img: <UserRound /> },
+    { id: 4, content: 'Kateqoriyalar', map: 'categories', img: <UserRound /> },
+    { id: 5, content: 'Sifarişlər', map: 'orders', img: <ScrollText /> },
+    { id: 6, content: 'Analizlər', map: 'analyses', img: <ScrollText /> },
   ]
 
   return (

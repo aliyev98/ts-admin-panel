@@ -9,7 +9,7 @@ const SectionSearchBar = () => {
                 <Search className='search-icon' />
             </button>
 
-            <input type="text" placeholder='Search' />
+            <input type="text" placeholder='Axtar' />
         </div>
     )
 }

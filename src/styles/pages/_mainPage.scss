@@ -1,43 +1,72 @@
-.mainpage-container{
+.mainpage-container {
     display: flex;
 
-    .content-wrapper{
+    .content-wrapper {
         flex-grow: 1;
 
-        .content{
+        .content {
             padding: 16px;
 
-            .section-container{
+            .section-container {
                 display: flex;
                 flex-direction: column;
                 background-color: #fcfcfc;
                 border-radius: 16px;
-                height: 500px;
+                min-height: 100vh;
                 padding: 16px;
 
-                .section-header{
+                .section-header {
                     display: flex;
                     align-items: center;
                     gap: 24px;
 
-                    button{
+
+                    button {
                         cursor: pointer;
                         position: relative;
                     }
 
-                    .section-name{
+                    .primary-button {
+                        margin-left: auto;
+                    }
+
+                    .section-name {
                         display: flex;
                         align-items: center;
                         gap: 12px;
 
-                        span{
+                        span {
                             font-size: 24px;
                         }
                     }
                 }
 
-                .section-content{
-                    background-color: green;
+                .product-counts {
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    padding: 12px;
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+
+                        span {
+                            font-size: 12px;
+                        }
+
+                        span {
+                            &:first-child {
+                                color: #0A58D1;
+                            }
+
+                            &:last-child {
+                                color: #989a9c;
+                            }
+                        }
+
+                    }
                 }
             }
         }

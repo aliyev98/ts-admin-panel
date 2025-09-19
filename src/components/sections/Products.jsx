@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Grip, ScrollText } from 'lucide-react'
 import SectionSearchBar from '../../ui/inputs/SectionSearchBar'
 import LayoutDropdown from '../dropdowns/LayoutDropdown';
@@ -6,47 +6,54 @@ import AddButton from '../../ui/buttons/AddButton';
 import axios from 'axios';
 import Table from '../tables/Table';
 import { productColumns } from '../../statics/columns/ProductsColumns'
+import { setSidebarSelection } from '../../redux/sidebarSlice';
+import { useDispatch } from 'react-redux';
 
 const Products = () => {
+
+  const dispatch = useDispatch();
 
   const [open, setOpen] = useState(false);
   const [layout, setLayout] = useState("card")
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const BASE = "https://8000.jobing.az";
+  const STORAGE_PREFIX = "/storage/";
+
+  function buildImageUrl(path) {
+    if (!path) return "";
+    if (/^https?:\/\//i.test(path)) return path;
+    return new URL(STORAGE_PREFIX + path, BASE).toString();
+  }
 
   useEffect(() => {
-    axios.get("https://8000.jobing.az/api/product")
-      .then(res => { setProducts(res.data.data || []); })
-      .catch(console.error);
+    const controller = new AbortController();
+    axios.get("https://8000.jobing.az/api/product", { signal: controller.signal })
+      .then(res => setProducts(res.data?.data ?? []))
+      .catch(err => { if (err.name !== 'CanceledError') setError(err); })
+      .finally(() => setLoading(false));
+    return () => controller.abort();
   }, []);
 
-  const productDatas = [
-    {
-      no: 1,
+  console.log(products)
 
-      title: products[0].title,
-
-      brand: "Nike",
-
-      category: products?.forEach(e => {
-        e.category?.name
-      }),
-
-      rating: "5",
-
-      date: "22/06/2025"
-    },
-
-  ]
-
-  // console.log(products[0].title);
-
-  console.log(products.title);
-  
-  
-
-
-
-
+  const rows = useMemo(() => (
+    products.map((p, i) => ({
+      id: p.id ?? i,
+      image: p.images?.[0]?.image_path ? buildImageUrl(p.images[0].image_path) : "",
+      title: p.title ?? '',
+      brand: p.brand?.name ?? '',
+      category: Array.isArray(p.categories) ? p.categories.map(c => c.name).join(', ') : (p.category?.name ?? ''),
+      rating: p.rating ?? 0,
+      date: p.updatedAt ?? p.createdAt ?? '',
+      imageUrl: p.images?.[0]?.url ?? '',
+      price: p.price ?? 0,
+      stock: p.stock ?? 0,
+      status: p.status ?? 'Draft',
+    }))
+  ), [products]);
 
   return (
     <div className='section-container products-section'>
@@ -55,7 +62,7 @@ const Products = () => {
 
         <div className='section-name'>
           <ScrollText />
-          <span>Products</span>
+          <span>Məhsullar</span>
         </div>
 
         <SectionSearchBar />
@@ -63,35 +70,29 @@ const Products = () => {
         <div className="change-layout" onClick={() => setOpen((prev) => !prev)}>
           <Grip />
 
-
           {
             open && (<LayoutDropdown layout={layout} setLayout={setLayout} />)
           }
         </div>
 
-        <AddButton content="Add Product" route='addProduct' />
+        <AddButton content="Məhsul əlavə et" route='add_product' />
 
       </div>
 
       <div className="product-counts">
 
         <div>
-          <span>All</span>
+          <span>Bütün məhsullar</span>
           <span>({products?.length})</span>
         </div>
 
         <div>
-          <span>Published</span>
+          <span>Yayımlananlar</span>
           <span>(2387)</span>
         </div>
 
         <div>
-          <span>Drafts</span>
-          <span>(85)</span>
-        </div>
-
-        <div>
-          <span>On Discount</span>
+          <span>Endirimdə</span>
           <span>(339487)</span>
         </div>
 
@@ -112,7 +113,11 @@ const Products = () => {
           )
         } */}
 
-        <Table columns={productColumns} data={productDatas} />
+        <div className="table-container">
+          <Table columns={productColumns} data={rows} />
+        </div>
+
+
       </div>
 
     </div>

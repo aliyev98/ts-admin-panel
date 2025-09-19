@@ -9,7 +9,7 @@ const HeaderSearchBar = () => {
                 <Search />
             </button>
 
-            <input type="text" placeholder='Search' />
+            <input type="text" placeholder='Axtar' />
 
 
 

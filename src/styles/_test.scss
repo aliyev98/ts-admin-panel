@@ -1,0 +1,13 @@
+.product-form { display: grid; gap: 16px; }
+.locale-tabs { display: flex; gap: 8px; }
+.tab { padding: 6px 10px; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; }
+.tab.active { background: #0d6efd; color:#fff; border-color:#0d6efd; }
+.card { padding: 12px; border: 1px solid #e5e7eb; border-radius: 8px; display: grid; gap: 12px; }
+.row { display: grid; gap: 6px; }
+.grid2 { grid-template-columns: 1fr 1fr; gap: 12px; }
+.field-with-actions { display: flex; gap: 8px; }
+.field-with-actions input { flex: 1; }
+.actions { display: flex; gap: 6px; }
+.check { display: flex; align-items: end; }
+.form-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.error { color: #dc2626; font-size: 12px; }

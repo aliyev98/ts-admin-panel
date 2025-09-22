@@ -32,6 +32,8 @@
 // (inputs)
 @use './ui/inputs/headerSearchBar';
 @use './ui/inputs/sectionSeachBar';
+@use './ui/inputs/inputWithLabel';
+@use './ui/inputs/textareaWithLabel';
 
 // (logos)
 @use './ui/logos/logo';
@@ -42,3 +44,8 @@
 @use './ui/buttons/profile';
 @use './ui/buttons/addButton';
 @use './ui/buttons/primaryButton';
+
+
+
+
+@use './test';

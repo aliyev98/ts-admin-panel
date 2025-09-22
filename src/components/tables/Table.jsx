@@ -2,7 +2,7 @@ import { useReactTable, getCoreRowModel, flexRender } from '@tanstack/react-tabl
 
 
 
-export default function Table({data, columns}) {
+export default function Table({ data, columns }) {
     const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() })
 
     return (
@@ -13,7 +13,9 @@ export default function Table({data, columns}) {
                     <tr key={hg.id}>
                         {hg.headers.map((header) => (
                             <th key={header.id}>
-                                {flexRender(header.column.columnDef.header, header.getContext())}
+                                <span>
+                                    {flexRender(header.column.columnDef.header, header.getContext())}
+                                </span>
                             </th>
                         ))}
                     </tr>

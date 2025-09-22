@@ -1,21 +1,55 @@
-.table-container {
-    border: 1px solid gray;
-    border-radius: 8px;
-    height: calc(100vh - 230px);
-    overflow: scroll;
-    scrollbar-width: none;
+$tbl-border: #e1e1e1;
+$pad-x: 24px;
+$pad-y: 16px;
 
+.table-container {
+    border-radius: 8px;
+    width: calc(100vw - 370px);
+    height: calc(100vh - 230px);
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: #fff;
+    border-radius: 8px;
 
     .table {
-        width: 100%;
+        width: max-content;
+        min-width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        table-layout: auto;
+
+        th {
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        td {
+            vertical-align: middle;
+            white-space: nowrap;
+        }
 
         thead {
+            position: sticky;
+            top: 0;
+            z-index: 9;
+            background: #fff;
 
             tr {
-
                 th {
-                    padding: 0px 10px;
-                    // text-align: left;
+                    text-overflow: ellipsis;
+                    padding: 5px;
+
+
+                    span {
+                        background: #6F767E;
+                        color: #fff;
+                        padding: 2px 8px;
+                        border-radius: 4px;
+                        font-size: 13px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                    }
                 }
             }
 
@@ -30,24 +64,49 @@
                 }
 
                 td {
+                    border-left: 1px solid $tbl-border;
+                    font-size: 14px;
+                    font-weight: 600;
                     padding: 5px 10px;
+
+                    &:first-child {
+                        border-left: none;
+                    }
                 }
-            }
-
-            .table-img-div {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                overflow: hidden;
-
-                .table-img {
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
-                }
-
             }
         }
 
     }
+
+    // cells
+
+    .rating-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .table-img-div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        .table-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
 }

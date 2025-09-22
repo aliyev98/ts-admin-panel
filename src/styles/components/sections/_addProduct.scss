@@ -1,9 +1,31 @@
-.add-product-section{
+.add-product-section {
 
-    .add-product-form{
+    .lang-tabs {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 5px;
+
+        button {
+            padding: 4px;
+            font-weight: 500;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: blue;
+            color: #fff;
+        }
+    }
+
+    .add-product-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         padding: 16px;
         background-color: lightgray;
-        border-radius: 16px;
+        border-radius: 6px;
     }
 
 }

@@ -47,7 +47,7 @@ const Products = () => {
       brand: p.brand?.name ?? '',
       category: Array.isArray(p.categories) ? p.categories.map(c => c.name).join(', ') : (p.category?.name ?? ''),
       rating: p.rating ?? 0,
-      date: p.updatedAt ?? p.createdAt ?? '',
+      date: p.updatedAt ?? p.created_at ?? '',
       imageUrl: p.images?.[0]?.url ?? '',
       price: p.price ?? 0,
       stock: p.stock ?? 0,

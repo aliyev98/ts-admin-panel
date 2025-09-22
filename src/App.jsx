@@ -1,4 +1,5 @@
 import MainPage from "./pages/MainPage"
+import Test from '../src/Test'
 import "./styles/style.scss"
 
 const App = () => {
@@ -6,6 +7,7 @@ const App = () => {
     <div className="app">
 
       <MainPage />
+
 
     </div>
   )

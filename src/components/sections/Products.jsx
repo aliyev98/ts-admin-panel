@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Grip, ScrollText } from 'lucide-react'
+import { Grip, ShoppingBasket } from 'lucide-react'
 import SectionSearchBar from '../../ui/inputs/SectionSearchBar'
 import LayoutDropdown from '../dropdowns/LayoutDropdown';
 import AddButton from '../../ui/buttons/AddButton';
@@ -61,7 +61,7 @@ const Products = () => {
       <div className="section-header">
 
         <div className='section-name'>
-          <ScrollText />
+          <ShoppingBasket />
           <span>Məhsullar</span>
         </div>
 

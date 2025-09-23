@@ -154,6 +154,7 @@ export default function ProductForm({ onSubmit }) {
 
       {/* Non-translatable group */}
       <div className="card">
+        
         <div className="row">
           <label>SKU</label>
           <input {...register("sku", { required: true })} placeholder="UX-123" />

@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import Products from '../components/sections/Products'
 import AddProduct from '../components/sections/AddProduct'
 import Test from '../Test'
+import Brands from '../components/sections/Brands'
 
 const MainPage = () => {
 
@@ -23,6 +24,8 @@ const MainPage = () => {
           {selectedSection === "products" && <Products />}
 
           {selectedSection === "add_product" && <AddProduct />}
+
+          {selectedSection === "brands" && <Brands />}
 
           {selectedSection === "customers" && <Test />}
 

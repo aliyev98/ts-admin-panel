@@ -1,9 +1,7 @@
 .input-with-label {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    border-radius: 12px;
-    background: var(--Neutral-02, #F4F4F4);
+    gap: 6px;
     padding: 8px 16px;
     width: 100%;
 
@@ -29,7 +27,7 @@
 
     input {
         color: var(--Neutral-04, #6F767E);
-        font-size: 15px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 600;
         line-height: 24px;
@@ -37,10 +35,13 @@
         background-color: transparent;
         border: none;
         outline: none;
+        border: 1px solid gray;
+        border-radius: 6px;
+        padding: 5px;
 
         &::placeholder {
             color: var(--Neutral-04, #6F767E);
-            font-size: 15px;
+            font-size: 12px;
             font-style: normal;
             font-weight: 600;
             line-height: 24px;

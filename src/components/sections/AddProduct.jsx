@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Grip, ScrollText } from 'lucide-react'
+import { Grip, Plus, ScrollText } from 'lucide-react'
 import SectionSearchBar from '../../ui/inputs/SectionSearchBar'
 import LayoutDropdown from '../dropdowns/LayoutDropdown'
 import AddButton from '../../ui/buttons/AddButton'
 import PrimaryButton from '../../ui/buttons/PrimaryButton'
 import InputWithLabel from '../../ui/inputs/InputWithLabel'
 import TextareaWithLabel from "../../ui/inputs/TextareaWithLabel";
+import Select from "../../ui/selects/Select";
 
 
 const AddProduct = () => {
@@ -25,6 +26,7 @@ const AddProduct = () => {
         description: { az: "", tr: "", en: "", ru: "" },
         slug: { az: "", tr: "", en: "", ru: "" },
         imageAlt: { az: "", tr: "", en: "", ru: "" },
+        brand: { az: "", tr: "", en: "", ru: "" },
 
         // Non-translatable alanlar
         sku: "",
@@ -61,6 +63,7 @@ const AddProduct = () => {
       title: values.title,
       description: values.description,
       slug: values.slug,
+      brand: values.brand,
       image_alt: values.imageAlt,
       sku: values.sku,
       price: Number(values.price),
@@ -78,7 +81,7 @@ const AddProduct = () => {
 
         <div className='section-name'>
 
-          <ScrollText />
+          <Plus />
           <span>Məhsul əlavə et</span>
 
         </div>
@@ -131,10 +134,15 @@ const AddProduct = () => {
 
         <form className="add-product-form">
 
+          <InputWithLabel label='Məhsulun adı' lang={activeLanguage.toUpperCase()} htmlFor="title" register={register} data='title' activeLanguage={activeLanguage} baseLanguage={baseLanguage} />
 
-          <InputWithLabel label='Məhsulun adı' lang={activeLanguage.toUpperCase()} htmlFor="title" register={register} activeLanguage={activeLanguage} baseLanguage={baseLanguage} />
+          <TextareaWithLabel label={"Məsulun açıqlaması"} placeholder={'Məhsul haqqında...'} lang={activeLanguage.toUpperCase()} register={register} data='description' activeLanguage={activeLanguage} baseLanguage={baseLanguage} />
 
-          <TextareaWithLabel label={"Məsulun açıqlaması"} lang={activeLanguage.toUpperCase()} />
+          <InputWithLabel label="Sku" register={register} singleName="sku" />
+
+          {/* <InputWithLabel label='Brend' register={register} data='brand' singleName="brand" /> */}
+
+          <Select placeholder="Brend seçin" />
 
 
         </form>

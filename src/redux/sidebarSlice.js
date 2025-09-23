@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    sidebarSelection: ""
+    sidebarSelection: "products"
 }
 
 export const sidebarSlice = createSlice({

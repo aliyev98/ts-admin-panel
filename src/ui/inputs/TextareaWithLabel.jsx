@@ -1,15 +1,18 @@
 import React from 'react'
 
-const TextareaWithLabel = ({ label, lang }) => {
+const TextareaWithLabel = ({ label, placeholder, lang, register, data, activeLanguage, baseLanguage }) => {
     return (
         <div className='textarea-with-label'>
 
             <label htmlFor="">
                 <span>{label}</span>
-                <span>{lang}</span>
+                <span>({lang})</span>
             </label>
 
-            <textarea name="" id=""></textarea>
+            <textarea
+                placeholder={placeholder}
+                {...register(`${data}.${activeLanguage}`, { required: activeLanguage === baseLanguage })}
+            />
 
         </div>
     )

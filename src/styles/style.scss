@@ -10,6 +10,10 @@
 @use './components/dropdowns/profileDropdown';
 @use './components/dropdowns/layoutDrpdown';
 
+// (modals)
+@use './components/modals/modals';
+@use './components/modals/addProductModal';
+
 // sections
 @use './components/sections/products';
 @use './components/sections/addProduct';
@@ -38,12 +42,18 @@
 // (logos)
 @use './ui/logos/logo';
 
+// selects
+
+@use './ui/selects/select';
+
 // (buttons)
 @use './ui/buttons/notificationsButton';
 @use './ui/buttons/shopping-card-button';
 @use './ui/buttons/profile';
 @use './ui/buttons/addButton';
 @use './ui/buttons/primaryButton';
+
+@use './ui/noData';
 
 
 

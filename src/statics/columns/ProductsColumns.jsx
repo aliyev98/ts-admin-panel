@@ -1,6 +1,5 @@
-import { Star } from "lucide-react";
-
 // statics/columns/ProductsColumns.js
+
 export const productColumns = [
   { id: "no", header: "No", enableSorting: false, size: 56, cell: ({ row }) => row.index + 1 },
 

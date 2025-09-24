@@ -1,73 +1,88 @@
 .mainpage-container {
     display: flex;
+    padding: 30px;
+    background-color: #0096EB;
 
-    .content-wrapper {
-        flex-grow: 1;
+    .centered-div {
+        width: 100%;
+        display: flex;
+        background-color: #EFF4FF;
+        border-radius: 6px;
+        overflow: hidden;
 
-        .content {
-            padding: 16px;
 
-            .section-container {
-                display: flex;
-                flex-direction: column;
-                background-color: #fcfcfc;
-                border-radius: 16px;
+        .content-wrapper {
+            flex-grow: 1;
+
+            .content {
                 padding: 16px;
 
-                .section-header {
+                .section-container {
                     display: flex;
-                    align-items: center;
-                    gap: 24px;
+                    flex-direction: column;
+                    background-color: #EFF4FF;
+                    border-radius: 16px;
 
-
-                    button {
-                        cursor: pointer;
-                        position: relative;
-                    }
-
-                    .primary-button {
-                        margin-left: auto;
-                    }
-
-                    .section-name {
+                    .section-header {
                         display: flex;
                         align-items: center;
-                        gap: 12px;
+                        gap: 24px;
+                        padding-right: 16px;
 
-                        span {
-                            font-size: 24px;
+                        button {
+                            cursor: pointer;
+                            position: relative;
+                        }
+
+                        .primary-button {
+                            margin-left: auto;
+                        }
+
+                        .section-name {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            span {
+                                font-size: 24px;
+                            }
                         }
                     }
-                }
 
-                .product-counts {
-                    display: flex;
-                    align-items: center;
-                    gap: 24px;
-                    padding: 12px;
-
-                    div {
+                    .product-counts {
                         display: flex;
                         align-items: center;
-                        gap: 8px;
+                        gap: 24px;
+                        padding: 12px;
 
-                        span {
-                            font-size: 12px;
-                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
 
-                        span {
-                            &:first-child {
-                                color: #0A58D1;
+                            span {
+                                font-size: 12px;
                             }
 
-                            &:last-child {
-                                color: #989a9c;
-                            }
-                        }
+                            span {
+                                &:first-child {
+                                    color: #0A58D1;
+                                }
 
+                                &:last-child {
+                                    color: #989a9c;
+                                }
+                            }
+
+                        }
                     }
                 }
             }
         }
     }
+
+
+
+
+
 }

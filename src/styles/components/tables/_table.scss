@@ -4,12 +4,12 @@ $pad-y: 16px;
 
 .table-container {
     border-radius: 8px;
-    width: calc(100vw - 370px);
+    // width: calc(100vw - 370px);
     height: calc(100vh - 230px);
     overflow-x: scroll;
     overflow-y: scroll;
     scrollbar-width: none;
-    background-color: #fff;
+    background-color: #fcfcfc;
     border-radius: 8px;
 
     .table {
@@ -33,7 +33,7 @@ $pad-y: 16px;
             position: sticky;
             top: 0;
             z-index: 9;
-            background: #fff;
+            background-color: #EFF4FF;
 
             tr {
                 th {
@@ -62,7 +62,7 @@ $pad-y: 16px;
             tr {
 
                 &:nth-child(odd) {
-                    background-color: #f4f4f4;
+                    background-color: #EFF4FF;
                 }
 
                 td {
@@ -74,6 +74,7 @@ $pad-y: 16px;
                     &:first-child {
                         border-left: none;
                     }
+                    
                 }
             }
         }

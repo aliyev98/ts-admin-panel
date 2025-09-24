@@ -14,25 +14,38 @@ const MainPage = () => {
   return (
     <div className='mainpage-container'>
 
-      <Sidebar />
+      <div className="centered-div">
 
-      <div className="content-wrapper">
-        <Header />
+        <Sidebar />
 
-        <div className="content">
+        <div className="content-wrapper">
+          <Header />
 
-          {selectedSection === "products" && <Products />}
+          <div className="content">
 
-          {selectedSection === "add_product" && <AddProduct />}
+            {selectedSection === "products" && <Products />}
 
-          {selectedSection === "brands" && <Brands />}
+            {selectedSection === "add_product" && <AddProduct />}
 
-          {selectedSection === "customers" && <Test />}
+            {selectedSection === "brands" && <Brands />}
+
+            {selectedSection === "customers" && <Test />}
+
+          </div>
+
 
         </div>
 
-
       </div>
+
+
+      {/* <div className="content-wrapper">
+        <Header />
+
+
+
+
+      </div> */}
 
 
 

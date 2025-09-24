@@ -23,6 +23,7 @@
 
 // pages
 @use './pages/mainPage';
+@use './pages/login';
 
 // layouts
 @use './layouts/header';
@@ -38,6 +39,7 @@
 @use './ui/inputs/sectionSeachBar';
 @use './ui/inputs/inputWithLabel';
 @use './ui/inputs/textareaWithLabel';
+@use './ui/inputs/inputWithIcon';
 
 // (logos)
 @use './ui/logos/logo';

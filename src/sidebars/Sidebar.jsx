@@ -2,7 +2,7 @@ import { ChartColumnIncreasing, ChartColumnStacked, ChevronRight, Plus, Pocket, 
 import React, { useState } from 'react'
 import Logo from '../ui/logos/Logo'
 import { useDispatch, useSelector } from 'react-redux'
-import { setSidebarSelection } from '../redux/sidebarSlice'
+import { setSidebarSelection } from '../redux/features/sidebarSlice'
 
 const Sidebar = () => {
 

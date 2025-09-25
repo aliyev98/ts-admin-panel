@@ -6,6 +6,7 @@ import Products from '../components/sections/Products'
 import AddProduct from '../components/sections/AddProduct'
 import Test from '../Test'
 import Brands from '../components/sections/Brands'
+import ResetPassword from '../components/auth/ResetPassword'
 
 const MainPage = () => {
 
@@ -14,7 +15,7 @@ const MainPage = () => {
   return (
     <div className='mainpage-container'>
 
-      <div className="centered-div">
+      <div className="main-page-centered-divv">
 
         <Sidebar />
 
@@ -30,6 +31,7 @@ const MainPage = () => {
             {selectedSection === "brands" && <Brands />}
 
             {selectedSection === "customers" && <Test />}
+
 
           </div>
 

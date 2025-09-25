@@ -1,0 +1,54 @@
+.enter-otp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #fcfcfc;
+    width: 40%;
+    min-height: 60%;
+    padding: 16px;
+    border-radius: 16px;
+
+    .title {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    .code-inputs {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .code-input {
+            padding: 12px;
+            border-radius: 12px;
+            background: #EFEFEF;
+            width: 64px !important;
+
+            input {
+                outline: none;
+                border: none;
+                width: 100%;
+                background-color: #EFEFEF;
+                color: #1A1D1F;
+                text-align: center;
+                font-family: Inter;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 48px;
+                letter-spacing: -1.44px;
+            }
+
+        }
+    }
+
+    .form-button{
+        margin-top: 12px;
+        width: 80%;
+    }
+
+}

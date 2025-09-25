@@ -5,6 +5,12 @@
 
 // components
 
+// auth
+@use './components/auth/login';
+@use './components/auth/enterOtp';
+@use './components/auth/forgotPassword';
+@use './components/auth/resetPassword';
+
 // (dropdowns)
 @use './components/dropdowns/dropdowns';
 @use './components/dropdowns/profileDropdown';
@@ -23,7 +29,7 @@
 
 // pages
 @use './pages/mainPage';
-@use './pages/login';
+@use './pages/loginPage';
 
 // layouts
 @use './layouts/header';
@@ -54,6 +60,7 @@
 @use './ui/buttons/profile';
 @use './ui/buttons/addButton';
 @use './ui/buttons/primaryButton';
+@use './ui/buttons/formButton';
 
 @use './ui/noData';
 

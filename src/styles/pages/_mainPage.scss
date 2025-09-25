@@ -1,15 +1,15 @@
 .mainpage-container {
     display: flex;
-    padding: 30px;
+    // padding: 30px;
     background-color: #0096EB;
+    min-height: 100vh;
 
-    .centered-div {
+    .main-page-centered-divv {
         width: 100%;
         display: flex;
         background-color: #EFF4FF;
-        border-radius: 6px;
         overflow: hidden;
-
+        // height: calc(100vh - 60px);
 
         .content-wrapper {
             flex-grow: 1;
@@ -80,9 +80,5 @@
             }
         }
     }
-
-
-
-
 
 }

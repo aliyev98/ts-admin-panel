@@ -6,7 +6,7 @@ import AddButton from '../../ui/buttons/AddButton';
 import axios from 'axios';
 import Table from '../tables/Table';
 import { productColumns } from '../../statics/columns/ProductsColumns'
-import { setSidebarSelection } from '../../redux/sidebarSlice';
+import { setSidebarSelection } from '../../redux/features/sidebarSlice';
 import { useDispatch } from 'react-redux';
 
 const Products = () => {

@@ -2,7 +2,7 @@ import MainPage from "./pages/MainPage"
 import Test from '../src/Test'
 import "./styles/style.scss"
 import { Routes, Route } from "react-router-dom"
-import Login from "./pages/Login"
+import LoginPage from "./pages/LoginPage"
 
 const App = () => {
   return (
@@ -11,8 +11,8 @@ const App = () => {
 
 
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<MainPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
 

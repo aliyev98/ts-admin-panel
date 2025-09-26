@@ -7,6 +7,7 @@ import AddProduct from '../components/sections/AddProduct'
 import Test from '../Test'
 import Brands from '../components/sections/Brands'
 import ResetPassword from '../components/auth/ResetPassword'
+import AddBrand from '../components/sections/AddBrand'
 
 const MainPage = () => {
 
@@ -31,6 +32,8 @@ const MainPage = () => {
             {selectedSection === "brands" && <Brands />}
 
             {selectedSection === "customers" && <Test />}
+
+            {selectedSection === "add_brand" && <AddBrand />}
 
 
           </div>

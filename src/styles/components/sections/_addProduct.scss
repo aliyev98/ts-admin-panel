@@ -1,24 +1,5 @@
 .add-product-section {
 
-    .lang-tabs {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 16px;
-
-        button {
-            padding: 4px;
-            font-weight: 500;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .active {
-            background-color: blue;
-            color: #fff;
-        }
-    }
-
     .add-product-form {
         display: flex;
         flex-direction: column;

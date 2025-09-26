@@ -5,7 +5,7 @@ export const brandsColumns = [
     {
         id: "image",
         header: "Şəkil",
-        accessorKey: "image",     // rows: { image: 'https://...' }
+        accessorKey: "image",
         enableSorting: false,
         size: 72,
         cell: ({ row }) => {
@@ -23,7 +23,7 @@ export const brandsColumns = [
                         loading="lazy"
                         decoding="async"
                         onError={(e) => {
-                            e.currentTarget.onerror = null; // döngüyü kır
+                            e.currentTarget.onerror = null;
                             e.currentTarget.src = "/assets/placeholder.png";
                         }}
                     />

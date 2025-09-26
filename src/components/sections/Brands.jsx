@@ -64,7 +64,7 @@ const Brands = () => {
                     }
                 </div>
 
-                <AddButton content="Məhsul əlavə et" route='add_product' />
+                <AddButton content="Brend əlavə et" route='add_brand' />
 
             </div>
 

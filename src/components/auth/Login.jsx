@@ -19,6 +19,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [wrongAuth, setWrongAuth] = useState(false);
   const [fatalError, setFatalError] = useState(null);
+  const [shortPswrd, setShortPswrd] = useState(null)
 
   const handleContinue = async () => {
     if (!isActive || loading) return;
@@ -45,12 +46,16 @@ const Login = () => {
       axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 
       navigate("/dashboard");
-      
+
     } catch (err) {
       const status = err?.response?.status;
       if (status === 401 || status === 400) {
         setWrongAuth(true);
-      } else {
+      }
+      else if(status === 422){
+        setShortPswrd(true)
+      }
+       else {
         setFatalError(true);
       }
     } finally {
@@ -64,8 +69,11 @@ const Login = () => {
         <span className="wrong-auth">E-mail və ya şifrə yanlışdır!</span>
       )}
       {fatalError && <span className="fatal-auth">{fatalError}</span>}
+      {
+        shortPswrd && <span className="short-password">Şifrə 6 simvoldan qısa ola bilməz!</span>
+      }
 
-      <span>Daxil ol</span>
+      <span className="title">Daxil ol</span>
 
       <InputWithIcon
         type="text"

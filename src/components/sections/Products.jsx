@@ -46,11 +46,17 @@ const Products = () => {
       title: p.title ?? '',
       brand: p.brand?.name ?? '',
       category: Array.isArray(p.categories) ? p.categories.map(c => c.name).join(', ') : (p.category?.name ?? ''),
+      gender: p.gender === "Male" ? "Kişi" : p.gender === "Female" ? "Qadın" : "Ümumi",
+      colors: Array.isArray(p.colors) ? p.colors.map(c => c.hex) : [],
+      sizes: Array.isArray(p.sizes) ? p.sizes.map((s)=>(s.name)) : [],
+      discount: p.discount,
       rating: p.rating ?? 0,
       date: p.updatedAt ?? p.created_at ?? '',
       imageUrl: p.images?.[0]?.url ?? '',
       price: p.price ?? 0,
       stock: p.stock ?? 0,
+      views: p.views,
+      sale_count: p.sale_count,
       status: p.status ?? 'Draft',
     }))
   ), [products]);

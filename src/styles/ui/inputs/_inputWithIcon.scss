@@ -1,21 +1,26 @@
-.input-with-icon{
+.input-with-icon {
     display: flex;
     align-items: center;
     gap: 8px;
     border: 1px solid #dedede;
-    border-radius: 6px;
     padding: 8px;
     cursor: pointer;
+    border-radius: 16px;
+    background: var(--neutral-colors-background, #F4F4F4);
 
-    button{
+
+    button {
         cursor: pointer;
     }
 
 
-    input{
-        color: var(--Neutral-04, #6F767E);
+    input {
         font-size: 16px;
         font-weight: 500;
         flex-grow: 1;
+
+        &::placeholder{
+            color: #000;
+        }
     }
 }

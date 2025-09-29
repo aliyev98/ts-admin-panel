@@ -23,6 +23,7 @@
 // sections
 @use './components/sections/products';
 @use './components/sections/addProduct';
+@use './components/sections/customers';
 
 // tables
 @use './components/tables/table';
@@ -59,7 +60,7 @@
 @use './ui/buttons/shopping-card-button';
 @use './ui/buttons/profile';
 @use './ui/buttons/addButton';
-@use './ui/buttons/primaryButton';
+@use './ui/buttons/routeButton';
 @use './ui/buttons/formButton';
 
 @use './ui/noData';

@@ -33,7 +33,7 @@ $pad-y: 16px;
             position: sticky;
             top: 0;
             z-index: 9;
-            background-color: #EFF4FF;
+            background-color: #fff;
 
             tr {
                 th {
@@ -66,7 +66,7 @@ $pad-y: 16px;
             tr {
 
                 &:nth-child(odd) {
-                    background-color: #EFF4FF;
+                    background-color: #f4f4f4;
                 }
 
 

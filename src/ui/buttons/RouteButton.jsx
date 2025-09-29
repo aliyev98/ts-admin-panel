@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setSidebarSelection } from '../../redux/features/sidebarSlice'
 import { ChevronRight } from 'lucide-react';
 
-const PrimaryButton = ({ content, route }) => {
+const RouteButton = ({ content, route }) => {
 
     const dispatch = useDispatch();
 
@@ -15,4 +15,4 @@ const PrimaryButton = ({ content, route }) => {
     )
 }
 
-export default PrimaryButton
+export default RouteButton

@@ -5,9 +5,10 @@ import { UserRound } from 'lucide-react';
 import FormButton from '../../ui/buttons/FormButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { setStep, setEmail, setPassword, setToken } from '../../redux/features/authSlice';
+import LogoLarge from '../../ui/logos/LogoLarge';
 
 const ForgotPassword = () => {
-    
+
     const dispatch = useDispatch();
     const email = useSelector(state => state.auth.email)
     const [loading, setLoading] = useState(false);
@@ -59,7 +60,11 @@ const ForgotPassword = () => {
 
     return (
         <div className="forgot-password-container centered-div">
-            <span>Şifrəni yenilə</span>
+
+            <LogoLarge />
+
+
+            <span className='title'>Şifrəni yenilə</span>
 
             {msg && <div className="info-banner">dsdsd</div>}
             {errMsg && <div className="error-banner">dsdsd</div>}

@@ -3,9 +3,10 @@
     align-items: center;
     gap: 12px;
     border: 1px solid #dedede;
-    border-radius: 12px;
     padding: 8px;
     flex-grow: 1;
+    border-radius: var(--Number-Scale-m, 12px);
+    background: var(--Neutral-colors-black50, #F3F3F3);
 
     button {
         cursor: pointer;
@@ -22,6 +23,9 @@
         flex-grow: 1;
         font-size: 12px;
         font-weight: 500;
-        color: var(--Neutral-04, #6F767E);
+
+        &::placeholder{
+            color: #000;
+        }
     }
 }

@@ -85,7 +85,7 @@ const Products = () => {
 
       </div>
 
-      <div className="product-counts">
+      <div className="counts">
 
         <div>
           <span>Bütün məhsullar</span>

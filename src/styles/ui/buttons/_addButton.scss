@@ -1,11 +1,15 @@
-.add-button{
+.add-button {
     display: flex;
     align-items: center;
     gap: 12px;
-    background-color: #0B5ED7;
     color: white;
     padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 16px;
-    font-weight: 500;
+    border-radius: var(--Number-Scale-full, 99px);
+    background: var(--Brand-color-Orange, #FF6300);
+
+    span {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+    }
 }

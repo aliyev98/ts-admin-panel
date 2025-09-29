@@ -4,7 +4,7 @@ import { Grip, Plus, ScrollText } from 'lucide-react'
 import SectionSearchBar from '../../ui/inputs/SectionSearchBar'
 import LayoutDropdown from '../dropdowns/LayoutDropdown'
 import AddButton from '../../ui/buttons/AddButton'
-import PrimaryButton from '../../ui/buttons/PrimaryButton'
+import RouteButton from '../../ui/buttons/RouteButton'
 import InputWithLabel from '../../ui/inputs/InputWithLabel'
 import TextareaWithLabel from "../../ui/inputs/TextareaWithLabel";
 import Select from "../../ui/selects/Select";
@@ -92,7 +92,7 @@ const AddProduct = () => {
           <Grip />
         </div> */}
 
-        <PrimaryButton content="Bütün məhsullar" route="products" />
+        <RouteButton content="Bütün məhsullar" route="products" />
 
 
       </div>

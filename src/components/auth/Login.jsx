@@ -6,6 +6,7 @@ import { Lock, UserRound } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { setStep, setEmail, setPassword, setToken } from '../../redux/features/authSlice';
 import { useNavigate } from "react-router-dom";
+import LogoLarge from '../../ui/logos/LogoLarge'
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -52,10 +53,10 @@ const Login = () => {
       if (status === 401 || status === 400) {
         setWrongAuth(true);
       }
-      else if(status === 422){
+      else if (status === 422) {
         setShortPswrd(true)
       }
-       else {
+      else {
         setFatalError(true);
       }
     } finally {
@@ -65,6 +66,9 @@ const Login = () => {
 
   return (
     <div className="login-container centered-div">
+
+      <LogoLarge />
+
       {wrongAuth && (
         <span className="wrong-auth">E-mail və ya şifrə yanlışdır!</span>
       )}

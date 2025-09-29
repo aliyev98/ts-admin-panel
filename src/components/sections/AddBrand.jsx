@@ -1,6 +1,6 @@
 import { Grip, Plus } from 'lucide-react'
 import React, { useState } from 'react'
-import PrimaryButton from '../../ui/buttons/PrimaryButton'
+import RouteButton from '../../ui/buttons/RouteButton'
 import InputWithLabel from '../../ui/inputs/InputWithLabel';
 import TextareaWithLabel from '../../ui/inputs/TextareaWithLabel';
 import Select from '../../ui/selects/Select';
@@ -89,7 +89,7 @@ const AddBrand = () => {
                     <Grip />
                 </div> */}
 
-                <PrimaryButton content="Bütün brendlər" route="brands" />
+                <RouteButton content="Bütün brendlər" route="brands" />
 
 
             </div>

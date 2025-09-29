@@ -1,14 +1,15 @@
 .form-button {
-    background-color: #2A85FF;
     padding: 16px 100px;
     font-size: 16px;
-    border-radius: 16px;
     width: fit-content;
     font-weight: 500;
     color: #fff;
     cursor: pointer;
+    border-radius: var(--Number-Scale-full, 99px);
+    background: var(--Brand-color-Orange, #FF6300);
 }
 
 .deactive {
-    background: rgba(42, 133, 255, 0.50);
+    background: var(--Brand-color-Orange, #fc8f4b);
+
 }

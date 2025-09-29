@@ -1,6 +1,15 @@
 .login-page-container {
     height: 100vh;
     position: relative;
-    background-color: #EFF4FF;
+    background-color: #fff;
+    background: var(--Brand-color-Orange, #FF6300);
+
+    .centered-div{
+
+        .logo-large{
+            width: 250px;
+            height: auto;
+        }
+    }
 
 }

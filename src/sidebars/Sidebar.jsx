@@ -11,8 +11,6 @@ const Sidebar = () => {
 
   const selectedSection = useSelector((state) => state.sidebar.sidebarSelection)
 
-  console.log(selectedSection)
-
   const [isActive, setIsActive] = useState(1);
   const [isCollapsed, setIsCollapsed] = useState(false)
 

@@ -48,19 +48,6 @@ const Customers = () => {
             </div>
 
             <div className="section-content">
-                {/* {
-          layout === 'card' && (
-            <div>
-              card
-            </div>
-          )
-          ||
-          layout === 'table' && (
-            <div>
-              <Table data={[]} />
-            </div>
-          )
-        } */}
 
                 <div className="table-container">
                     <Table columns={[]} data={[]} />

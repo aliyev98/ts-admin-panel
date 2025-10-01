@@ -5,24 +5,15 @@ import LayoutDropdown from '../dropdowns/LayoutDropdown'
 import AddButton from '../../ui/buttons/AddButton'
 import { brandsColumns } from '../../statics/columns/BrandsColumns'
 import Table from '../tables/Table'
-import axios from 'axios'
-import { setBrands } from '../../redux/features/brandsSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import { getBrands } from '../../redux/features/brandsSlice'
 
 const Brands = () => {
 
+    const { brands, loading, error } = useSelector(state => state.brands);
     const [open, setOpen] = useState(false);
     const [layout, setLayout] = useState("card")
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
     const dispatch = useDispatch()
-
-    const BASE = "https://8000.jobing.az";
-    const STORAGE_PREFIX = "/storage/";
-
-
-    const brands = useSelector(state => state.brands.brands)
 
     function buildImageUrl(path) {
         if (!path) return null;
@@ -33,28 +24,17 @@ const Brands = () => {
     }
 
     useEffect(() => {
-        const controller = new AbortController();
-        axios.get("https://8000.jobing.az/api/brand", { signal: controller.signal })
-            .then((res) => {
-                // API: res.data?.data -> [] bekliyoruz
-                dispatch(setBrands(res.data?.data ?? []));
-            })
-            .catch(err => { if (err.name !== 'CanceledError') setError(err); })
-            .finally(() => setLoading(false));
-        return () => controller.abort();
-    }, []);
+        dispatch(getBrands());
+    }, [dispatch]); // eslint için
 
     const rows = useMemo(() => (
         brands.map((b, i) => ({
             id: b.id ?? i,
-            image: b.image ? buildImageUrl(b.image) : 'brand',   // null olabiliyor
+            image: b.image ? buildImageUrl(b.image) : 'brand',
             name: b.name ?? '',
             order: b.sort_order ?? 0,
         }))
     ), [brands]);
-
-    console.log(brands, "brands");
-
 
 
     return (

@@ -6,34 +6,34 @@ const BASE_URL = import.meta.env.VITE_API;
 const initialState = {
   loading: false,
   error: null,
-  brands: [],
+  products: [],
 };
 
-export const getBrands = createAsyncThunk('brands/getBrands', async () => {
-  const { data } = await axios.get(`${BASE_URL}/brand`);
+export const getProducts = createAsyncThunk('product/getProducts', async () => {
+  const { data } = await axios.get(`${BASE_URL}/product`);
   return data?.data;
 });
 
-export const brandsSlice = createSlice({
-  name: 'brands',
+export const productSlice = createSlice({
+  name: 'product',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getBrands.pending, (state) => {
+      .addCase(getProducts.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(getBrands.fulfilled, (state, action) => {
-        state.brands = action.payload;
+      .addCase(getProducts.fulfilled, (state, action) => {
+        state.products = action.payload;
         state.loading = false;
         state.error = null;
       })
-      .addCase(getBrands.rejected, (state, action) => {
+      .addCase(getProducts.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload ?? 'İstek reddedildi';
       });
   },
 });
 
-export default brandsSlice.reducer;
+export default productSlice.reducer;

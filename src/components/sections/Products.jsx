@@ -7,6 +7,7 @@ import Table from '../tables/Table';
 import { productColumns } from '../../statics/columns/ProductsColumns'
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../redux/features/productSlice';
+import ProductCard from '../../ui/cards/ProductCard';
 
 const BASE = import.meta.env.VITE_BASE_URL || 'https://teymurstore.az';
 const STORAGE_PREFIX = import.meta.env.VITE_STORAGE_PREFIX || '/storage/';
@@ -72,6 +73,7 @@ const Products = () => {
         </div>
 
         <AddButton content="Məhsul əlavə et" route='add_product' />
+
       </div>
 
       <div className="counts">
@@ -90,9 +92,19 @@ const Products = () => {
       </div>
 
       <div className="section-content">
-        <div className="table-container">
-          <Table columns={productColumns} data={rows} loading={loading} />
-        </div>
+
+        {layout === "card" && (
+          <div className="product-cards">
+            <ProductCard data={products} />
+          </div>
+        )}
+
+        {layout === "table" && (
+          <div className="table-container">
+            <Table columns={productColumns} data={rows} loading={loading} />
+          </div>
+        )}
+
       </div>
     </div>
   )

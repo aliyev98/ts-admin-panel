@@ -15,6 +15,7 @@ const AddProduct = () => {
   const languages = ["az", "tr", "en", "ru"];
   const baseLanguage = "az";
 
+
   const [activeLanguage, setActiveLanguage] = useState(baseLanguage);
 
   const { register, handleSubmit, getValues, setValue, formState: { errors, isSubmitting } } =
@@ -139,8 +140,6 @@ const AddProduct = () => {
           <TextareaWithLabel label={"Məsulun açıqlaması"} placeholder={'Məhsul haqqında...'} lang={activeLanguage.toUpperCase()} register={register} data='description' activeLanguage={activeLanguage} baseLanguage={baseLanguage} />
 
           <InputWithLabel label="Sku" register={register} singleName="sku" />
-
-          {/* <InputWithLabel label='Brend' register={register} data='brand' singleName="brand" /> */}
 
           <Select placeholder="Brend seçin" />
 

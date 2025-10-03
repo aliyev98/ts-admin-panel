@@ -10,7 +10,7 @@ const InputWithLabel = ({ label, lang, placeholder, htmlFor, register, data, act
             </label>
 
             <input type="text" placeholder={placeholder}
-                {...register(`${data}.${activeLanguage}`, { required: activeLanguage === baseLanguage })}
+               
             />
 
         </div>

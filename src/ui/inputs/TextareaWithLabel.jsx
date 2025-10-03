@@ -11,7 +11,6 @@ const TextareaWithLabel = ({ label, placeholder, lang, register, data, activeLan
 
             <textarea
                 placeholder={placeholder}
-                {...register(`${data}.${activeLanguage}`, { required: activeLanguage === baseLanguage })}
             />
 
         </div>

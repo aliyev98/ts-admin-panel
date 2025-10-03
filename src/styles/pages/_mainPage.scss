@@ -49,7 +49,7 @@
                             }
                         }
 
-                        .change-layout{
+                        .change-layout {
                             position: relative;
                             cursor: pointer;
                         }
@@ -103,7 +103,14 @@
                                 color: #fff;
                             }
                         }
-                        
+
+                        .product-cards {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                            gap: 12px;
+
+                        }
+
                     }
                 }
 

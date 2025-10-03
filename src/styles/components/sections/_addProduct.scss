@@ -5,6 +5,14 @@
         flex-direction: column;
         gap: 16px;
         border-radius: 6px;
+
+        .create{
+            background-color: red;
+            border-radius: 16px;
+            padding: 4px 20px;
+            width: fit-content;
+            cursor: pointer;
+        }
     }
 
 }

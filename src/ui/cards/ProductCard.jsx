@@ -1,4 +1,4 @@
-import { Eye } from 'lucide-react'
+import { ArrowUpRight, Eye } from 'lucide-react'
 import React from 'react'
 
 const ProductCard = ({ data }) => {
@@ -11,7 +11,7 @@ const ProductCard = ({ data }) => {
 
                 <div className="product-img">
 
-                    <img src={product.images[0].image_path} alt="" />
+                    <img src={product.images[0]?.image_path} alt="" />
 
                     <div className="rating-box">
                         <img src="images/star-icon-white.svg" alt="" />
@@ -23,14 +23,33 @@ const ProductCard = ({ data }) => {
                         <span>{product.views}</span>
                     </div>
 
+                    {/* <div className="category-box">
+                        {product.category?.name}
+                    </div> */}
+
                 </div>
 
                 <div className="product-infos">
-                    <span className="product-price">{product.price}$</span>
+
+                    <div className="product-price">
+
+                        <span className={`price ${product.discount > 0 ? 'line-through' : ''}`}>{product.price} ₼</span>
+
+                        {
+                            product.discount > 0 && (
+                                <span className="discount">{product.discount} ₼</span>
+                            )
+                        }
+
+                        <button className="see-more">
+                            <span>Daha çox</span>
+                            <ArrowUpRight className='arrow-icon' />
+
+                        </button>
+
+                    </div>
 
                     <span className="product-name">{product.title}</span>
-
-
 
                     <p className="product-description">{product.description}</p>
 
@@ -40,7 +59,7 @@ const ProductCard = ({ data }) => {
                     <div className="product-sizes">
                         {
                             product.sizes.map((s) => (
-                                <div>
+                                <div key={s.id}>
                                     <span>{s.name}</span>
                                 </div>
                             ))
